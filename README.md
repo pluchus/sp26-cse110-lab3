@@ -24,6 +24,6 @@ issue, squash merge).
 
 ## About the validator error
 
-The one parse error on `screenshots/css-validation.png` comes from CSS Nesting
-(the `&` selector inside `.minute-block`). The lab writeup calls this out as
-expected for newer selectors, so it is left as is.
+The one parse error in the screenshot comes from CSS Nesting (the `&` selector
+inside `.minute-block`). The lab writeup says the validator will throw errors
+for some of the newer selectors and that this is fine, so I left it.

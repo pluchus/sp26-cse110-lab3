@@ -165,7 +165,7 @@ input[type="text"] {
     min-width: 120px;
 }
 
-/* attribute selector variation */
+/* same attribute pattern for date picker */
 input[type="date"] {
     border: 1px solid var(--border);
     border-radius: 4px;
@@ -279,18 +279,19 @@ footer p {
     margin-bottom: 1.25rem;
 }
 
-/* display property with two different values from the set */
+/* display: inline-block so names sit horizontally */
 .attendance li {
     display: inline-block;
     margin: 4px 8px 4px 0;
 }
 
+/* display: block forces the submit button to its own line */
 button.primary {
     display: block;
     width: auto;
 }
 
-/* position used with second value (relative) */
+/* second position value, relative, anchors the recording label */
 .recording-label {
     position: relative;
     top: 2px;
