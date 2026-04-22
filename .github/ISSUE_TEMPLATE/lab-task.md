@@ -1,6 +1,6 @@
 ---
 name: Lab task
-about: A scoped task for the Lab 3 Agile workflow
+about: A single task for the Lab 3 Agile workflow
 title: "[Task] "
 labels: agile-task
 assignees: pluchus
@@ -8,11 +8,11 @@ assignees: pluchus
 
 ## Goal
 
-<!-- One sentence: what does "done" look like? -->
+<!-- one sentence: what does done look like -->
 
 ## Why
 
-<!-- Which lab requirement does this close? Link the relevant checklist item. -->
+<!-- which lab checklist item does this close -->
 
 ## Acceptance criteria
 
@@ -20,14 +20,14 @@ assignees: pluchus
 - [ ]
 - [ ]
 
-## Files expected to change
+## Files to touch
 
 -
 
 ## Branch name
 
-`<type>/<short-name>` (e.g. `feat/css-base`, `chore/docs`)
+`<type>/<short-name>` (examples: `feat/css-base`, `chore/docs`)
 
-## Notes / risks
+## Notes
 
-<!-- Anything tricky, prior art, links, screenshots -->
+<!-- anything weird, links, screenshots, stuff that tripped me up -->
