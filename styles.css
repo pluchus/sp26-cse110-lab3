@@ -1,0 +1,257 @@
+/* Lab 3, Team 12 Meeting Minutes
+   CSE 110 SP26, Kyle Kim */
+
+/* theme variables */
+:root {
+    --primary: #1f3b57;
+    --primary-soft: rgba(31, 59, 87, 0.1);
+    --accent: hsl(28, 90%, 55%);
+    --accent-mix: color-mix(in srgb, hsl(28, 90%, 55%) 70%, white);
+    --p3-highlight: color(display-p3 0.95 0.88 0.72);
+    --paper: #faf7f2;
+    --ink: rgb(32, 32, 38);
+    --muted: hsla(215, 10%, 40%, 0.75);
+    --border: #d9d3c7;
+    --radius: 10px;
+}
+
+/* universal reset so box sizing is consistent */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--ink, #222);
+    background-color: var(--paper);
+    line-height: 1.55;
+
+    /* absolute units: px, pt, cm */
+    font-size: 12pt;
+    padding: 24px;
+    max-width: 28cm;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    min-height: 100vh;
+}
+
+/* selector list */
+h1, h2, h3 {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 0.01em;
+}
+
+h2 {
+    font-size: 1.5rem;
+    border-bottom: 3px solid var(--accent);
+    border-radius: 2px;
+    padding-bottom: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.15rem;
+    color: var(--muted);
+    text-decoration: underline;
+    text-align: left;
+}
+
+/* descendant combinator, any anchor inside site-nav */
+.site-nav a {
+    color: var(--primary);
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+/* child combinator, direct anchor children only */
+.site-nav > a {
+    background-color: var(--primary-soft);
+}
+
+/* element selector with class (element.class) */
+button.primary {
+    background-color: var(--accent);
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+
+    /* short padding */
+    padding: 8px 18px;
+
+    /* short margin */
+    margin: 12px 0 0 0;
+
+    border-style: solid;
+    border-color: var(--accent-mix);
+    border-width: 2px;
+    border-radius: var(--radius);
+}
+
+/* site-header, using long-hand padding */
+.site-header {
+    background: var(--p3-highlight);
+    padding-top: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    border-radius: var(--radius);
+    margin-bottom: 1.5rem;
+}
+
+/* card, shared look for both sections */
+.card {
+    background-color: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+    min-width: 0;
+}
+
+/* id selector */
+#feedback {
+    max-width: 540px;
+}
+
+/* id selector */
+#notes {
+    color: var(--ink);
+}
+
+/* attendance list, styled like a ticket strip */
+.attendance {
+    background-color: var(--primary-soft);
+    border-radius: 6px;
+
+    /* auto margin horizontally, long-hand padding */
+    margin: 0 auto 1rem auto;
+    padding-top: 8px;
+    padding-right: 16px;
+    padding-bottom: 8px;
+    padding-left: 28px;
+
+    /* relative units: rem, em, % */
+    width: 100%;
+    font-size: 0.95rem;
+    line-height: 1.4em;
+}
+
+.attendance li {
+    /* keep default left margin for list items */
+    margin-left: 0.5em;
+}
+
+/* attribute selector for text inputs */
+input[type="text"] {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 6px 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    width: 100%;
+    max-width: 320px;
+    min-width: 120px;
+}
+
+/* attribute selector variation */
+input[type="date"] {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 6px 8px;
+}
+
+/* inputs + textarea: selector list */
+input, textarea, select {
+    background-color: white;
+    color: var(--ink);
+}
+
+textarea {
+    width: 100%;
+    max-width: 480px;
+    min-width: 200px;
+    height: 80px;
+    font-family: inherit;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 6px 8px;
+}
+
+/* adjacent sibling, input right before label */
+input + label {
+    margin-left: 4px;
+    color: var(--ink);
+}
+
+/* general sibling, any paragraph inside notes that comes after the h2 */
+#notes h2 ~ p {
+    margin-bottom: 0.5rem;
+}
+
+/* labels (element selector) */
+label {
+    color: var(--muted);
+    text-decoration: none;
+    text-align: left;
+}
+
+fieldset {
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 10px 14px;
+    margin-bottom: 12px;
+}
+
+legend {
+    color: var(--primary);
+    padding: 0 6px;
+    font-weight: 500;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+details {
+    margin-top: 12px;
+    padding: 6px 8px;
+    border: 1px dashed var(--border);
+    border-radius: 6px;
+}
+
+summary {
+    cursor: pointer;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.recording-label {
+    font-family: 'JetBrains Mono', monospace;
+    color: orange;
+    font-size: 0.9rem;
+}
+
+footer {
+    text-align: center;
+    color: var(--muted);
+    margin-top: 2rem;
+    font-size: 0.85rem;
+}
+
+footer p {
+    /* trailing note styling */
+    padding: 8px 0;
+}

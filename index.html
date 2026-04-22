@@ -5,24 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team 12 Meeting Minutes</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* small internal override so the first meeting date pops */
+        #notes > h3 {
+            letter-spacing: 0.02em;
+        }
+    </style>
 </head>
 <body>
 
-<header>
+<header class="site-header">
     <h1>Team 12 Meeting Minutes</h1>
-    <nav>
+    <nav class="site-nav">
         <a href="#notes">Notes</a> |
         <a href="#feedback">Feedback</a>
     </nav>
 </header>
 
-<main>
-    <section id="notes">
+<main class="layout">
+    <section id="notes" class="card">
         <h2>Brainstorming</h2>
         <h3>April 7, 2026</h3>
 
         <p><b>Attendance:</b></p>
-        <ol>
+        <ol class="attendance">
             <li>Julian</li>
             <li>Zhengyin</li>
             <li>Kyle</li>
@@ -36,46 +49,48 @@
             <li>Varsha</li>
         </ol>
 
-        <div>
-            <p><strong>Agenda</strong></p>
-            <ul>
-                <li>Introductions</li>
-                <li>Go over team contract</li>
-                <li>Brainstorm project ideas</li>
-                <li>Set up <em>Slack</em></li>
-            </ul>
+        <div class="minute-grid">
+            <div class="minute-block">
+                <p><strong>Agenda</strong></p>
+                <ul>
+                    <li>Introductions</li>
+                    <li>Go over team contract</li>
+                    <li>Brainstorm project ideas</li>
+                    <li>Set up <em>Slack</em></li>
+                </ul>
+            </div>
+
+            <div class="minute-block">
+                <p><b>Unfinished business</b></p>
+                <ul>
+                    <li>Nothing, this is the first meeting</li>
+                </ul>
+            </div>
+
+            <div class="minute-block">
+                <p><strong>New business</strong></p>
+                <ul>
+                    <li>We need to decide on a <i>team name</i> and theme</li>
+                    <li>Julian will submit group assignments on Canvas</li>
+                    <li>Meetings will be <b>Mondays at 4pm</b> on Zoom</li>
+                </ul>
+            </div>
+
+            <div class="minute-block">
+                <p><em>Misc</em></p>
+                <ul>
+                    <li>Everyone fill out <a href="https://www.when2meet.com">when2meet</a> by Friday</li>
+                    <li>Julian will post updates in Slack</li>
+                </ul>
+            </div>
         </div>
 
-        <div>
-            <p><b>Unfinished business</b></p>
-            <ul>
-                <li>Nothing, this is the first meeting</li>
-            </ul>
-        </div>
-
-        <div>
-            <p><strong>New business</strong></p>
-            <ul>
-                <li>We need to decide on a <i>team name</i> and theme</li>
-                <li>Julian will submit group assignments on Canvas</li>
-                <li>Meetings will be <b>Mondays at 4pm</b> on Zoom</li>
-            </ul>
-        </div>
-
-        <div>
-            <p><em>Misc</em></p>
-            <ul>
-                <li>Everyone fill out <a href="https://www.when2meet.com">when2meet</a> by Friday</li>
-                <li>Julian will post updates in Slack</li>
-            </ul>
-        </div>
-
-        <hr>
+        <hr style="border-top: 2px dashed currentColor; margin: 1.5rem 0;">
 
         <p>Whiteboard from the meeting:<br>
         <img src="screenshots/example.png" alt="whiteboard from meeting" width="400"></p>
 
-        <p><span>Recording:</span></p>
+        <p><span class="recording-label">Recording:</span></p>
         <audio controls>
             <source src="media/meeting1.mp3" type="audio/mpeg">
             Your browser does not support audio.
@@ -90,9 +105,9 @@
         </details>
     </section>
 
-    <section id="feedback">
+    <section id="feedback" class="card">
         <h2>Feedback</h2>
-        <form>
+        <form class="feedback-form">
             <fieldset>
                 <legend>Rate this meeting</legend>
                 <input type="radio" name="rating" value="good" id="good">
@@ -137,7 +152,7 @@
                 <label for="comments">Comments:</label><br>
                 <textarea id="comments" name="comments" rows="3" cols="30"></textarea>
             </p>
-            <button type="submit">Submit</button>
+            <button type="submit" class="primary">Submit</button>
         </form>
     </section>
 </main>
