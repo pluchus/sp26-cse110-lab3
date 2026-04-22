@@ -1,4 +1,4 @@
-# Team 12 — Standup Notes
+# Team 12 Standup Notes
 
 **Meeting Date:**
 **Time:**
@@ -23,11 +23,11 @@
 
 - [ ] Describe the blocker and who is blocked.
 
-## 4. Decisions & action items
+## 4. Decisions and action items
 
 - Decision:
-- Action item (owner → due date):
+- Action item (owner, due date):
 
 ## 5. Quick announcements
 
-- (Meetings, deadlines, external dependencies)
+- (meetings, deadlines, external dependencies)
