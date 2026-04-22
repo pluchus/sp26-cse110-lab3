@@ -255,3 +255,122 @@ footer p {
     /* trailing note styling */
     padding: 8px 0;
 }
+
+/* ===== layout additions ===== */
+
+/* flex on site-header, h1 sits left and nav sits right */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+/* grid on minute-grid, 2 column on desktop */
+.minute-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    grid-auto-rows: minmax(80px, auto);
+    margin-bottom: 1.25rem;
+}
+
+/* display property with two different values from the set */
+.attendance li {
+    display: inline-block;
+    margin: 4px 8px 4px 0;
+}
+
+button.primary {
+    display: block;
+    width: auto;
+}
+
+/* position used with second value (relative) */
+.recording-label {
+    position: relative;
+    top: 2px;
+    padding: 2px 6px;
+    background-color: var(--primary-soft);
+    border-radius: 4px;
+}
+
+/* pseudo-class selectors */
+a:hover {
+    background-color: var(--primary-soft);
+    text-decoration: underline;
+    color: var(--primary);
+}
+
+a:active {
+    color: var(--accent);
+}
+
+button.primary:hover {
+    background-color: var(--accent-mix);
+    cursor: pointer;
+}
+
+button.primary:active {
+    transform: translateY(1px);
+    border-color: var(--primary);
+}
+
+summary:hover {
+    color: var(--accent);
+}
+
+/* :has(), sections that contain a video card get a tinted background */
+.card:has(video) {
+    background-color: #fffaf2;
+}
+
+/* nested selector (CSS Nesting) for the minute blocks */
+.minute-block {
+    background-color: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+
+    & ul {
+        padding-left: 1.2rem;
+    }
+
+    & p {
+        margin-bottom: 0.4rem;
+        font-weight: 500;
+    }
+
+    &:hover {
+        border-color: var(--accent);
+    }
+}
+
+/* responsive, collapse layout on narrow screens */
+@media (max-width: 720px) {
+    body {
+        padding: 12px;
+        font-size: 11pt;
+    }
+
+    .site-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .minute-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+}
